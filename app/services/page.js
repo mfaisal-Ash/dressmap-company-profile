@@ -21,7 +21,7 @@ export default async function ServicesPage() {
         <p className="section-label">Our Services</p>
 
         <h1 className="page-title">
-          SaaS solutions for fashion discovery and brand strategy.
+          DressMap solutions for fashion discovery and brand strategy.
         </h1>
 
         <p className="page-desc">

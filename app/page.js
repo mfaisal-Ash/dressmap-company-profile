@@ -1,65 +1,236 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="hero corporate-hero">
+        <div className="container hero-grid">
+          <div>
+            <p className="badge">Fashion Technology Company</p>
+
+            <h1>
+              Building smarter fashion discovery for modern digital users.
+            </h1>
+
+            <p>
+              DressMap adalah perusahaan teknologi fashion yang membantu brand,
+              pengguna, dan partner bisnis menciptakan pengalaman pencarian
+              outfit yang lebih personal, cepat, dan strategis.
+            </p>
+
+            <div className="actions">
+              <Link href="/about" className="btn">
+                Company Profile
+              </Link>
+              <Link href="/contact" className="btn btn-outline">
+                Work With Us
+              </Link>
+            </div>
+          </div>
+
+          <div className="strategy-panel">
+            <div className="panel-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <h3>DressMap Strategy</h3>
+
+            <div className="strategy-list">
+              <div>
+                <strong>01</strong>
+                <p>Personalized outfit discovery</p>
+              </div>
+
+              <div>
+                <strong>02</strong>
+                <p>Fashion data mapping</p>
+              </div>
+
+              <div>
+                <strong>03</strong>
+                <p>Brand and user connection</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head center">
+            <p className="section-label">Company Overview</p>
+            <h2>A fashion-tech company with SaaS-driven solutions.</h2>
+            <p>
+              DressMap menggabungkan fashion, teknologi, dan data untuk membantu
+              pengguna menemukan style yang sesuai serta membantu brand memahami
+              kebutuhan pasar secara lebih tepat.
+            </p>
+          </div>
+
+          <div className="stats-grid">
+            <article className="stat-card">
+              <h3>10K+</h3>
+              <p>Outfit inspirations mapped</p>
+            </article>
+
+            <article className="stat-card">
+              <h3>500+</h3>
+              <p>Fashion categories analyzed</p>
+            </article>
+
+            <article className="stat-card">
+              <h3>30+</h3>
+              <p>Potential brand partners</p>
+            </article>
+
+            <article className="stat-card">
+              <h3>24/7</h3>
+              <p>Digital access for users</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-white">
+        <div className="container">
+          <div className="section-head">
+            <p className="section-label">Our Solutions</p>
+            <h2>Strategic solutions for fashion discovery.</h2>
+          </div>
+
+          <div className="card-grid">
+            <article className="card">
+              <div className="card-icon">⌕</div>
+              <h3>Style Discovery Platform</h3>
+              <p>
+                Membantu pengguna mencari inspirasi outfit berdasarkan kategori,
+                preferensi, aktivitas, dan kebutuhan harian.
+              </p>
+            </article>
+
+            <article className="card">
+              <div className="card-icon">▣</div>
+              <h3>Fashion Data Mapping</h3>
+              <p>
+                Mengelompokkan data fashion untuk memahami tren, preferensi
+                user, dan peluang strategi brand.
+              </p>
+            </article>
+
+            <article className="card">
+              <div className="card-icon">♡</div>
+              <h3>Brand Connection</h3>
+              <p>
+                Menjadi jembatan antara pengguna dan brand melalui rekomendasi
+                outfit yang relevan dan personal.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-white">
+  <div className="container">
+    <div className="section-head center">
+      <p className="section-label">Outfit Shopping Map</p>
+      <h2>Explore outfit shopping spots around the city.</h2>
+      <p>
+        DressMap membantu pengguna menemukan area belanja outfit terdekat,
+        mulai dari fashion store, boutique, sampai pusat belanja lokal.
+      </p>
+    </div>
+
+    <div className="map-layout">
+      <div className="map-info">
+        <div className="map-info-card">
+          <div className="card-icon">
+            <i className="ri-map-pin-line"></i>
+          </div>
+          <h3>Bandung Fashion Area</h3>
+          <p>
+            Titik contoh lokasi belanja outfit yang bisa digunakan sebagai
+            referensi eksplorasi fashion.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="map-info-card">
+          <div className="card-icon">
+            <i className="ri-store-2-line"></i>
+          </div>
+          <h3>Nearby Outfit Stores</h3>
+          <p>
+            Cocok untuk konsep DressMap sebagai platform pencarian dan pemetaan
+            lokasi fashion.
+          </p>
         </div>
-      </main>
+      </div>
+
+      <div className="map-card">
+        <iframe
+          title="DressMap Shopping Location"
+          src="https://www.google.com/maps?q=Bandung%20fashion%20store&output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
+  </div>
+</section>
+
+      <section className="section strategy-section">
+        <div className="container split-layout">
+          <div>
+            <p className="section-label">Business Strategy</p>
+            <h2>How DressMap creates value.</h2>
+            <p className="page-desc">
+              DressMap tidak hanya menampilkan inspirasi outfit, tetapi juga
+              membangun ekosistem fashion digital yang dapat digunakan untuk
+              kebutuhan pengguna, brand, dan partner bisnis.
+            </p>
+          </div>
+
+          <div className="process-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Understand user style</h3>
+                <p>Mengidentifikasi preferensi dan kebutuhan fashion pengguna.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Map fashion categories</h3>
+                <p>Mengatur data outfit agar mudah dicari dan direkomendasikan.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Connect with brands</h3>
+                <p>Membantu brand menjangkau user dengan rekomendasi relevan.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="container cta-box">
+          <div>
+            <p className="section-label">Let’s Collaborate</p>
+            <h2>Build the future of fashion discovery with DressMap.</h2>
+          </div>
+
+          <Link href="/contact" className="btn">
+            Contact Us
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
